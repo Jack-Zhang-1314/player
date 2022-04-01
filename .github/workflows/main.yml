@@ -19,10 +19,12 @@ jobs:
       - uses: actions/setup-node@v3.0.0
         with:
           node-version: "16.x"
+
       - name: install
         run: |
           pnpm install
           pnpm run build
+
       - name: usegit
         run: |
           git config --global user.email "zyj17715640603@gmail.com"
