@@ -28,8 +28,9 @@ jobs:
 
       - name: usegit
         run: |
-          git config --global user.email "zyj17715640603@gmail.com"
-          git remote set-url origin https://github.com/Jack-Zhang-1314/player.git
+          git config --local user.email "zyj17715640603@gmail.com"
+          git config --local user.name "Jack-Zhang-1314"
+          git remote set-url origin https://Jack-Zhang-1314:${{secrets.ACTION_ACCESS}}github.com/Jack-Zhang-1314/player.git
           git add .
           git commit -m "build docs"
           git push origin master
