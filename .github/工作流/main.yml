@@ -2,20 +2,16 @@
 
 name: CI
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [master]
   schedule:
     - cron: "30 17 * * *"
-
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
 
@@ -26,8 +22,7 @@ jobs:
       - name: install
         run: |
           pnpm install
-      - name: build app
-        run: pnpm run build
+          pnpm run build
       - name: usegit
         run: |
           git config --global user.email "zyj17715640603@gmail.com"
