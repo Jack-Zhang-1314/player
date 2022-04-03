@@ -1,9 +1,7 @@
-<script setup lang="ts">
-import player from "./components/player.vue"
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <player></player>
+  <router-view></router-view>
 </template>
 
 <style></style>

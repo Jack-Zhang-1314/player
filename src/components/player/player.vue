@@ -44,7 +44,7 @@ onMounted(() => {
   display: flex;
   height: 200%;
   width: 100%;
-  background-image: url(../assets/img/0.jpg);
+  background-image: url(@/assets/img/0.jpg);
   background-size: cover;
   justify-content: center;
 }
