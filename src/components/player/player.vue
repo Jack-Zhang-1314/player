@@ -57,7 +57,7 @@ onMounted(() => {
   height: 10rem;
   border-radius: 1rem;
   border: 2px solid rgb(14, 29, 36);
-  /* backdrop-filter: blur(10px); */
+  backdrop-filter: blur(10px);
 }
 
 .big-player {

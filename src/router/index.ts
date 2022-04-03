@@ -19,6 +19,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "player",
     component: () => import("@/views/player.vue"),
   },
+  {
+    path: "/drag",
+    name: "drag",
+    component: () => import("@/views/drag.vue"),
+  },
 ]
 
 const router = createRouter({
