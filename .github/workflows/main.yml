@@ -34,4 +34,4 @@ jobs:
           git add ./docs
           git checkout -b dev
           git commit -m "build docs"
-          git push -u origin dev
+          git push -f origin dev
