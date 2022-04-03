@@ -33,4 +33,4 @@ jobs:
           git remote set-url origin https://Jack-Zhang-1314:${{secrets.ACTION_ACCESS}}@github.com/Jack-Zhang-1314/player.git
           git add .
           git commit -m "build docs"
-          git push origin master
+          git push -f origin master
