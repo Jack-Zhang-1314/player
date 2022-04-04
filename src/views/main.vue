@@ -1,6 +1,7 @@
 <template>
   <button @click="link($event)">player</button>
   <button @click="link($event)">drag</button>
+  <button @click="link($event)">rcMenu</button>
 </template>
 
 <script setup lang="ts">
@@ -16,6 +17,9 @@ const link = (event: MouseEvent) => {
       break
     case "drag":
       router.push("/drag")
+      break
+    case "rcMenu":
+      router.push("/rcMenu")
       break
   }
 }

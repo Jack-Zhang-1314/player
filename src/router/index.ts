@@ -24,6 +24,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "drag",
     component: () => import("@/views/drag.vue"),
   },
+  {
+    path: "/rcMenu",
+    name: "rcMenu",
+    component: () => import("@/views/rcMenu.vue"),
+  },
 ]
 
 const router = createRouter({
