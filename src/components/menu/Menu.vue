@@ -1,6 +1,6 @@
 <template>
   <section class="wrap">
-    <article class="content" ref="contentRef">
+    <article class="content">
       <ul class="menu">
         <li class="item" v-for="item in menu" :key="item.icon">
           <span>{{ item.name }}</span>
@@ -21,8 +21,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue"
-
 const menu = [
   {
     name: "播放",
@@ -57,18 +55,6 @@ const menuItem = [
     name: "🎂",
   },
 ]
-
-const contentRef = ref<HTMLDivElement>()
-onMounted(() => {
-  window.addEventListener("contextmenu", (e) => {
-    e.preventDefault()
-
-    contentRef.value!.style.visibility = "visible"
-  })
-  document.addEventListener("click", () => {
-    contentRef.value!.style.visibility = "hidden"
-  })
-})
 </script>
 
 <style scoped>
@@ -81,7 +67,6 @@ onMounted(() => {
   font-size: 1rem;
 }
 .content {
-  visibility: hidden;
   min-width: min(10vw, 140px);
   border-radius: 10px;
   background-image: linear-gradient(135deg, rgb(231, 249, 246), transparent);
