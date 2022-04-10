@@ -21,40 +21,10 @@
 </template>
 
 <script setup lang="ts">
-const menu = [
-  {
-    name: "播放",
-    icon: "play",
-  },
-  {
-    name: "下载",
-    icon: "download",
-  },
-  {
-    name: "收藏",
-    icon: "collect",
-  },
-  {
-    name: "加速",
-    icon: "speed",
-  },
-  {
-    name: "分享",
-    icon: "share",
-  },
-]
-
-const menuItem = [
-  {
-    name: "👎",
-  },
-  {
-    name: "👌",
-  },
-  {
-    name: "🎂",
-  },
-]
+defineProps<{
+  menu: { name: string; icon: string }[]
+  menuItem: { name: string }[]
+}>()
 </script>
 
 <style scoped>
