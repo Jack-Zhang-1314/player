@@ -1,6 +1,6 @@
 <template>
   <router-view></router-view>
-  <Container #flip="props">
+  <Container #watch="props">
     <ImageURI v-bind="props" />
   </Container>
 </template>

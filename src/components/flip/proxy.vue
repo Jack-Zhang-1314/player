@@ -1,6 +1,4 @@
-<template>
-  <!-- <slot></slot> -->
-</template>
+<template></template>
 
 <script setup lang="ts">
 import { useAttrs } from "vue"
