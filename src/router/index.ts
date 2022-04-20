@@ -29,6 +29,24 @@ const routes: Array<RouteRecordRaw> = [
     name: "rcMenu",
     component: () => import("@/views/rcMenu.vue"),
   },
+  {
+    path: "/flip",
+    redirect: "/flip/main-child",
+    name: "flip",
+    component: () => import("@/views/flip.vue"),
+    children: [
+      {
+        path: "main-child",
+        name: "main-child",
+        component: () => import("@/components/flip/main-child.vue"),
+      },
+      {
+        path: "flip-child",
+        name: "flip-child",
+        component: () => import("@/components/flip/flip-child.vue"),
+      },
+    ],
+  },
 ]
 
 const router = createRouter({

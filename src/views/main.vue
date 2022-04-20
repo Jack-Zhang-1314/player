@@ -3,6 +3,7 @@
     <div @click="link($event)">player</div>
     <div @click="link($event)">drag</div>
     <div @click="link($event)">rcMenu</div>
+    <div @click="link($event)">flip</div>
   </article>
 </template>
 
@@ -23,6 +24,9 @@ const link = (event: MouseEvent) => {
       break
     case "rcMenu":
       router.push("/rcMenu")
+      break
+    case "flip":
+      router.push("/flip")
       break
   }
 }

@@ -1,0 +1,26 @@
+.box-btn {
+  padding-top: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn {
+  height: 50px;
+  width: 50px;
+  padding: 5px 5px;
+  background-color: rgb(52, 75, 71);
+  box-shadow: 2px 2px 2px rgb(87, 103, 100);
+  border: transparent;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: rgb(155, 219, 206);
+}
+
+.btn:active {
+  background-color: rgb(50, 94, 85);
+}
