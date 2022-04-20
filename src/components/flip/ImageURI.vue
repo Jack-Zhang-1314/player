@@ -7,7 +7,7 @@ withDefaults(
   defineProps<{
     height?: number
     width?: number
-    borderRadius?: string | number
+    borderRadius?: string
   }>(),
   {
     height: 150,
