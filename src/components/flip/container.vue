@@ -1,5 +1,5 @@
 <template>
-  <slot name="watch" v-bind="metaData.attrs"></slot>
+  <slot name="flip" v-bind="metaData.attrs"></slot>
 </template>
 
 <script setup lang="ts">

@@ -24,7 +24,7 @@ jobs:
         run: |
           npm install pnpm -g
           pnpm install
-          pnpm run build
+          npx vite build
 
       - name: usegit
         run: |
