@@ -22,6 +22,6 @@ img {
   width: v-bind(width + "px");
   height: v-bind(height + "px");
   border-radius: v-bind(borderRadius);
-  transition: all 0.8s 0s;
+  transition: all 1s 0s;
 }
 </style>

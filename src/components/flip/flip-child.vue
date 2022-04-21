@@ -10,11 +10,12 @@
     </button>
   </div>
   <div class="box-pos">
-    <Proxy :height="200" :width="200" borderRadius="50%"></Proxy>
+    <Proxy :height="width" :width="width" borderRadius="50%"></Proxy>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { ref } from "vue"
 import { useRouter } from "vue-router"
 import Proxy from "./proxy.vue"
 
@@ -23,8 +24,12 @@ const router = useRouter()
 const back = () => {
   router.back()
 }
-
-const rush = () => {}
+let width = ref(200)
+const rush = () => {
+  if (width.value < 300) {
+    width.value += 10
+  }
+}
 
 const btnData = {
   back: { name: "back", callback: back },
@@ -33,6 +38,7 @@ const btnData = {
 </script>
 <style scoped>
 @import "@/assets/css/flip-btn.css";
+
 .box-pos .bot-btn {
   flex-basis: 1;
 }

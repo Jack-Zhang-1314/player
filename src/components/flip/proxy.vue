@@ -5,6 +5,7 @@
 <script setup lang="ts">
 import { ref, useAttrs, onMounted } from "vue"
 import { metaData, proxyEl } from "./gloabl-flip"
+
 const props = defineProps<{
   modelValue?: boolean
 }>()
@@ -28,7 +29,6 @@ onMounted(() => {
 .box-proxy {
   height: v-bind(height + "px");
   width: v-bind(width + "px");
-  background-color: beige;
   border-radius: v-bind(borderRadius);
 }
 </style>

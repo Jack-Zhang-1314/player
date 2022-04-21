@@ -6,33 +6,38 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from "vue"
+import { computed, reactive, watch } from "vue"
 import { metaData, proxyEl } from "./gloabl-flip"
+import { useElementBounding } from "@vueuse/core"
 
-const rect = ref<DOMRect>()
+// watch(
+//   () => proxyEl.value,
+//   (newVal) => {
+//     rect.value = newVal?.getBoundingClientRect()
+//     console.log(newVal?.getBoundingClientRect())
+//   },
+//   {
+//     immediate: true,
+//     deep: true,
+//   }
+// )
 
-watch(
-  () => proxyEl.value,
-  (newVal) => {
-    rect.value = newVal?.getBoundingClientRect()
-  },
-  {
-    immediate: true,
-  }
-)
+const rect = reactive(useElementBounding(proxyEl))
 
-const left = computed(() => {
-  return `${rect.value?.left}px`
+const x = computed(() => {
+  return `${rect.x}px`
 })
-const top = computed(() => {
-  return `${rect.value?.right}px`
+const y = computed(() => {
+  console.log(rect.y)
+  return `${rect.y}px`
 })
 </script>
 
 <style scoped>
 .box-pos {
   position: absolute;
-  left: v-bind(left);
-  top: v-bind(top);
+  left: v-bind(x);
+  top: v-bind(y);
+  transition: all 0.5s 0s;
 }
 </style>
